@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Mode</title>
+    <style>
+    	#box{
+    height:51px;
+    width:150px;
+    border-radius:30px;
+    margin-left: 300px;
+    margin-top: 300px;
+    background-color:#00aaff;
+}
+#circle{
+    height:51px;
+    width:49px;
+    margin-top: 10px;
+    border-radius:50%;
+    background-color:white;
+    box-shadow: 0 0 10px #383838;
+}
+#line{
+    font-weight:bold;
+    margin-left: 300px;
+    font-size: 40px;
+}
+    </style>
+</head>
+<body id="body">
+	<div id="box" onclick="move()">
+        <div id="circle">
+            
+        </div>
+    </div>    
+    <div id="line">
+        Click on the Toggle Button
+    </div>
+    <script type="text/javascript">
+    	var n=0;
+    	var c=document.getElementById("circle");
+    	var b=document.getElementById("body");
+    	var l=document.getElementById("line");
+	    	function move(){
+	    		if(n%2==0){
+		   		l.style.color="white";
+		   		c.style.transition="all 0.3s"
+		   		c.style.marginLeft="67%";
+
+		   		b.style.transition="all 0.3s"
+		   		b.style.backgroundColor="#181818";
+		   		n+=1
+		   		}else{
+		   			l.style.color="black";
+			   		c.style.transition="all 0.3s"
+			   		c.style.marginLeft="1px";
+			   		c.style.marginTop="1px";
+			   		b.style.transition="all 0.3s"
+			   		b.style.backgroundColor="white";
+			   		n+=1
+		   		}
+    		};
+    </script>
+</body>
+</html>
